@@ -1,11 +1,11 @@
 
-  # ReadME
+  # ReadME Generator
   ## Description
-  automatically creates README file or updates current readme file with the user input from the questions the user answers
+  ReadMe Generator asks the user some simple questions about the details of their project, and then takes the user responses and either generates the readme file, or updates the current readme file, with the user input data automatically structuring the readme for them.
   ## Installation
-  NONE
+  No Installation is needed 
   ## Licenses
-  NONE
+  N/A
   ## Contributing
-  ME
+  Alex Hall . 
   

@@ -22,11 +22,11 @@ function generateMarkdown({
   # ${title}
   ## Description
   ${description}
-  ## Installation
+  ## Installation Instructions
   ${installation}
   ## Licenses
   ${licenses}
-  ## Contributing
+  ## Contributing Members
   ${contributing}
   `;
 }
