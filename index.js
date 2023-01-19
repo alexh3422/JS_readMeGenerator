@@ -50,7 +50,10 @@ function init() {
     ])
     .then((inquirerResponses) => {
       console.log("Generating README...");
-      writeToFile("README.md", generateMarkdown({ ...inquirerResponses }));
+      writeToFile(
+        "./generatedREADME/README.md",
+        generateMarkdown({ ...inquirerResponses })
+      );
     });
 }
 
