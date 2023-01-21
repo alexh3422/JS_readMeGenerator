@@ -7,19 +7,13 @@ const path = require("path");
 // TODO: Create an array of questions for user input
 const questions = [
   "what is the project title?",
-  "Description of Project?",
-  "Installation Instructions?",
-  "License/s?",
-  "Contributing Members?",
+  "What are the installation instructions (if any)?",
+  "Contributing Members are",
+  "Tests completed",
+  "Select a license for your project",
+  "Questions?",
+  "What is a description of the project?",
 ];
-
-const apacheLicense =
-  "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-const mitLicense =
-  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-const gplLicense =
-  "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-const noLicense = "";
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -37,48 +31,56 @@ function init() {
       },
       {
         type: "input",
-        name: "description",
+        name: "installation",
         message: questions[1],
       },
       {
         type: "input",
-        name: "installation",
+        name: "contributing",
         message: questions[2],
+      },
+      {
+        type: "input",
+        name: "tests",
+        message: questions[3],
       },
       {
         type: "list",
         name: "licenses",
-        message: questions[3],
-        choices: ["MIT", "Apache-2.0", "GPL-3.0", "None"],
+        message: questions[4],
+        choices: [
+          "MIT",
+          "GPL-3.0",
+          "Apache-2.0",
+          "BSD-3-Clause",
+          "BSD-2-Clause",
+          "Boost-1.0",
+          "CC0-1.0",
+          "EPL-1.0",
+          "MPL-2.0",
+          "AGPL-3.0",
+          "GPL-2.0",
+          "LGPL-3.0",
+          "Unlicensed",
+        ],
       },
       {
         type: "input",
-        name: "contributing",
-        message: questions[4],
+        name: "questions",
+        message: questions[5],
+      },
+      {
+        type: "input",
+        name: "description",
+        message: questions[6],
       },
     ])
     .then((inquirerResponses) => {
       console.log("Generating README...");
-      let license;
-      switch (inquirerResponses.licenses) {
-        case "MIT":
-          // Render MIT license badge
-          license = mitLicense;
-          break;
-        case "GPL-3.0":
-          // Render GPL-3.0 license badge
-          license = gplLicense;
-          break;
-        case "Apache-2.0":
-          // Render Apache-2.0 license badge
-          license = apacheLicense;
-          break;
-        default:
-          license = noLicense;
-      }
+
       writeToFile(
         "./generatedREADME/README.md",
-        generateMarkdown({ ...inquirerResponses, license: license })
+        generateMarkdown({ ...inquirerResponses })
       );
     });
 }
