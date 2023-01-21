@@ -13,6 +13,14 @@ const questions = [
   "Contributing Members?",
 ];
 
+const apacheLicense =
+  "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+const mitLicense =
+  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+const gplLicense =
+  "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+const noLicense = "";
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
@@ -38,9 +46,10 @@ function init() {
         message: questions[2],
       },
       {
-        type: "input",
+        type: "list",
         name: "licenses",
         message: questions[3],
+        choices: ["MIT", "Apache-2.0", "GPL-3.0", "None"],
       },
       {
         type: "input",
@@ -50,9 +59,26 @@ function init() {
     ])
     .then((inquirerResponses) => {
       console.log("Generating README...");
+      let license;
+      switch (inquirerResponses.licenses) {
+        case "MIT":
+          // Render MIT license badge
+          license = mitLicense;
+          break;
+        case "GPL-3.0":
+          // Render GPL-3.0 license badge
+          license = gplLicense;
+          break;
+        case "Apache-2.0":
+          // Render Apache-2.0 license badge
+          license = apacheLicense;
+          break;
+        default:
+          license = noLicense;
+      }
       writeToFile(
         "./generatedREADME/README.md",
-        generateMarkdown({ ...inquirerResponses })
+        generateMarkdown({ ...inquirerResponses, license: license })
       );
     });
 }
