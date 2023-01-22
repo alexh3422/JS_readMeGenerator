@@ -11,7 +11,7 @@ const questions = [
   "Contributing Members are",
   "Tests completed",
   "Select a license for your project",
-  "Questions?",
+  "What  is your email so you can be contacted with questions regarding this project?",
   "What is a description of the project?",
 ];
 

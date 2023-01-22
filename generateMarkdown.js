@@ -34,6 +34,7 @@ function generateMarkdown({
   tests,
   licenses,
   description,
+  questions,
 }) {
   let license;
   switch (licenses) {
@@ -100,7 +101,8 @@ ${contributing}
 ## Tests
 ${tests}
 ## Questions
-You can contact me at .... with any questions
+
+You can contact me at ${questions} with any questions
 
 `;
 }
