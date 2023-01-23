@@ -8,10 +8,10 @@ const path = require("path");
 const questions = [
   "what is the project title?",
   "What are the installation instructions (if any)?",
-  "Contributing Members are",
-  "Tests completed",
+  "Contributing Members are?",
+  "What tests were completed?",
   "Select a license for your project",
-  "What  is your email so you can be contacted with questions regarding this project?",
+  "What is your Github username?",
   "What is a description of the project?",
 ];
 

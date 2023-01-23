@@ -102,7 +102,7 @@ ${contributing}
 ${tests}
 ## Questions
 
-You can contact me at ${questions} with any questions
+You can reach me through  https://www.github.com/${questions} with any questions
 
 `;
 }

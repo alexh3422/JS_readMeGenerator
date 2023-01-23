@@ -1,9 +1,9 @@
 
-# readME
+# Readme
 ## License
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ## Description
-main
+testing
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -11,14 +11,14 @@ main
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-NONE
+none
 ## Usage
 
 ## Contributing
 Alex Hall
 ## Tests
-testedon local server
+None
 ## Questions
 
-You can contact me at test@test.com with any questions
+You can reach me through  https://www.github.com/alexh3422 with any questions
 
