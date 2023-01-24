@@ -35,6 +35,7 @@ function generateMarkdown({
   licenses,
   description,
   questions,
+  email,
 }) {
   let license;
   switch (licenses) {
@@ -102,7 +103,7 @@ ${contributing}
 ${tests}
 ## Questions
 
-You can reach me through  https://www.github.com/${questions} with any questions
+You can reach me through  https://www.github.com/${questions} with any questions or at ${email}
 
 `;
 }
