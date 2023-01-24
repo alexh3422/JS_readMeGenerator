@@ -85,6 +85,7 @@ function generateMarkdown({
 # ${title}
 ## License
 ${license}
+Click on the badge to learn more about the license.
 ## Description
 ${description}
 ## Table of Contents
