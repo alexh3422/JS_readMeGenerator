@@ -1,3 +1,4 @@
+// license badges
 const apacheLicense =
   "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
 const mitLicense =
@@ -26,7 +27,7 @@ const unlicense =
   "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
 const noLicense = "";
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown({
   title,
   installation,
