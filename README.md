@@ -12,6 +12,9 @@ User must have NODE.JS installed, please visit https://nodejs.org/en/ for instal
 ------- 2. in the same terminal window type "node index.js" and hit enter, you will then be prompted with a few questions that you can answer by typing your responses and hitting enter, once you are done you will see the words "Generating Readme....." on the screen. That means it worked!
 -------3. Locate the readme file in THIS projects local repo folder titled "generatedREADME". THAT IS YOUR NEW README FILE. You can then copy and paste that README file into your own projects local repo folder.
 
+Here is a link to a video demo of app install/use 
+https://drive.google.com/file/d/1cGKJKLZoqCbElIeUBzEwf3HCUnEn_Tcl/view?usp=share_link
+
 ## Licenses
 
 N/A
